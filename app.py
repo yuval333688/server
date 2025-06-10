@@ -1,6 +1,6 @@
 from flask import Flask, jsonify
 app = Flask(__name__)
 
-@app.route("/ping")
-def ping():
-    return jsonify({"msg": "pong"})
+@app.route("/")
+def hello_world():
+    return "Hello, World!"
