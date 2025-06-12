@@ -4,7 +4,7 @@ from supabase import create_client, Client
 
 
 class DataBaseManager:
-    instance: DataBaseManager = None
+    instance = None
 
     def __init__(self):
         if DataBaseManager.instance is None:
