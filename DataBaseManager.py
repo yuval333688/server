@@ -4,12 +4,10 @@ from supabase import create_client, Client
 
 
 class DataBaseManager:
-    instance = None
 
     def __init__(self):
-        if DataBaseManager.instance is None:
-            DataBaseManager.instance = self
-            self.supabase = self.initialize_supabase()
+        DataBaseManager.instance = self
+        self.supabase = self.initialize_supabase()
 
 
 
