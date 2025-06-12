@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 from DataBaseManager import DataBaseManager
 import os
 app = Flask(__name__)
-dataBaseManager :DataBaseManager
+dataBaseManager = DataBaseManager()
 
 
 
@@ -27,7 +27,7 @@ def getCountryBorder(country):
 
 if __name__ == '__main__':
     # Initialize Supabase client
-    dataBaseManager = DataBaseManager()
+    dataBaseManager 
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
 
