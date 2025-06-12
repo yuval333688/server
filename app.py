@@ -20,8 +20,7 @@ def getNames():
 
 @app.route("/getCountryBorder/<country>")
 def getCountryBorder(country):
-    dataBaseManager = DataBaseManager()
-    borders = dataBaseManager.fetch_CountryBorder(country)
+    borders = DataBaseManager.instance.getCountryBorder(country)
     return jsonify(borders)
 
 if __name__ == '__main__':
