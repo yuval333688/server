@@ -25,8 +25,8 @@ def getCountryBorder(country):
     borders = dataBaseManager.getCountryBorder(country)
     return jsonify(borders)
 
-@app.route("/ChecksIfInCountry/<country>/<latitude>,<longitude>")
-def getCountryBorder(country,latitude:float,longitude:float):
+@app.route("/checksIfInCountry/<country>/<latitude>,<longitude>")
+def checksIfInCountry(country,latitude:float,longitude:float):
     borders = dataBaseManager.getCountryBorder(country)
     from shapely.geometry import Point, Polygon
     point = Point(latitude, longitude)
