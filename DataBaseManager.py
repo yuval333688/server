@@ -19,10 +19,10 @@ class DataBaseManager:
         supabase: Client = create_client(url, key)
         return supabase
 
-    def getCountryBorder(self,CountryName:str):
+    def getCountryBorder(self,countryName:str):
         response = ( self.supabase.table("countryBorder")
                 .select("border")
-                .eq("name", "Canada")
+                .eq("name", countryName)
                 .execute())
         
         arr  =  response.data[0]['border']
