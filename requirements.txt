@@ -1,2 +1,6 @@
 Flask==3.0.3
 gunicorn==22.0.0
+supabase==2.15.3
+sqlalchemy==2.0.41
+python-dotenv==1.0.1
+requests>=2.31.0
